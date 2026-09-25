@@ -2,6 +2,12 @@
 
 Human-readable log of what changed in the onboarding prototype, for product review. Updated at each local commit — most recent first.
 
+## 2026-09-25 — Two new cards from the Drive shoots
+
+- **Portugal kit** (creative, 4-slide carousel): the on-model Portugal home-jersey set, proposing the kit is sold on the name and number rather than the crest.
+- **Aston Martin Speedcat posters** (ads, 3-slide carousel): the team's finished posters, proposing they run as one Meta carousel instead of three separate ads.
+- The Aston Martin reveal film now opens on the shoe instead of 0.7 seconds of empty black.
+
 ## 2026-09-25 — Fix leftover Shopify strings PUMA never actually uses
 
 Three visible spots still said "Shopify" even though PUMA runs on Salesforce Commerce Cloud: the Agents rail flyout ("Shopify store"), the Connectors rail flyout tile, and the command-palette connector index. Fixed to read "Commerce Cloud", matching what the Signals row and the Brand Memory connect card already say. Checked the rest of the codebase: the internal object keys (`CONNECTS.shopify`, `srcState.shopify`, `connect:'shopify'`) are just identifiers, never rendered — their actual `name`/`title`/`desc` fields already said Commerce Cloud/Salesforce, so those were left alone.
