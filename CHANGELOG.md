@@ -2,6 +2,22 @@
 
 Human-readable log of what changed in the onboarding prototype, for product review. Updated at each local commit — most recent first.
 
+## 2026-09-25 — Fix leftover Shopify strings PUMA never actually uses
+
+Three visible spots still said "Shopify" even though PUMA runs on Salesforce Commerce Cloud: the Agents rail flyout ("Shopify store"), the Connectors rail flyout tile, and the command-palette connector index. Fixed to read "Commerce Cloud", matching what the Signals row and the Brand Memory connect card already say. Checked the rest of the codebase: the internal object keys (`CONNECTS.shopify`, `srcState.shopify`, `connect:'shopify'`) are just identifiers, never rendered — their actual `name`/`title`/`desc` fields already said Commerce Cloud/Salesforce, so those were left alone.
+
+## 2026-09-25 — Three cards and a story now use ShopOS's own PUMA shoots
+
+The team's PUMA Drive folder holds three finished shoots: the Speedcat Aston Martin F1 team edition (stills, eight ad posters, a reveal film and an on-foot film), a Palermo street-styling set, and a Portugal home-jersey set. The cards whose subject matches now use them instead of PUMA's catalog shots.
+
+- **Drop reveal** (creative): now the Speedcat Aston Martin reveal film. The card was about Homura OG; it now proposes treating the Aston Martin Speedcat as a release, since that is the drop the film was made for.
+- **Two ways to wear** (creative): now a two-slide carousel of Palermo worn two ways on the street, a leather jacket and dark denim, then a white tee and chinos. The title says Palermo rather than Palermo Leather, because the shoot is the suede green-and-yellow Palermo.
+- **Three Speedcat creatives past frequency 4** (ads): now plays the on-foot Aston Martin Speedcat film, which is the fresh cut the card proposes rotating in.
+- **Popular ads story**: the Speedcat and Palermo slides now use the on-foot Speedcat frame and the Palermo street shot.
+- One session in history was renamed from the Homura reveal to the Aston Martin Speedcat reveal to match.
+
+**Not used yet.** The brown heritage Speedcat set, the eight Aston Martin posters, the Portugal jersey set and the Bengaluru FC jersey shoot. No card is about football or the heritage racing story, so these need a new card, not a swap. The Speedcat on-street card and the Suede card keep PUMA's own films, because neither shoot matches what those cards propose.
+
 ## 2026-09-24 — README identifies this as the PUMA fork
 
 The README described a generic ShopOS Feed prototype with no brand named anywhere in it. Now it says up front this is the PUMA India fork (in.puma.com), names the palette and asset sources, points to `CHANGELOG.md` for the full history and open items, and notes the untouched older PUMA build at `../feed-puma-oldsot/`.
